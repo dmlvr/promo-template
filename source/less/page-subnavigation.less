@@ -7,6 +7,11 @@
 
 .page-subnavigation__wrapper {
   .container;
+
+  @media (max-width: @max-width) {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .page-subnavigation__list {
@@ -15,6 +20,15 @@
   width: 100%;
   justify-content: space-between;
   background-color: rgb(255, 204, 24);
+
+  @media (max-width: @max-width) {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+    width: 300px;
+  }
 }
 
 .page-subnavigation__item {
@@ -30,5 +44,52 @@
 
   &:hover {
     background-color: #f2ab26;
+    color: white;
   }
+}
+
+.page-subnavigation__list--active .page-subnavigation__link {
+  border-right: none;
+}
+
+.page-subnavigation__toogle {
+  border: none;
+  background-color: @yellow;
+  margin-top: 0;
+  display: none;
+  padding: 10px;
+  color: @gray;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/icon-menu.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    background-color: #f2ab26;
+    cursor: pointer;
+    color: white;
+  }
+
+  @media(max-width: @max-width) {
+    display: flex;
+  }
+
+  &--menu-open {
+    margin-right: 10px;
+
+    &::before {
+      background-image: url("../img/icon-cross.svg");
+    }
+  }
+}
+
+.page-subnavigation__toogle-text {
+  padding-left: 5px;
 }

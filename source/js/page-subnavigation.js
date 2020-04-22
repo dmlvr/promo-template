@@ -2,6 +2,8 @@
 
 (function () {
 
+  // Отрисовка навигационного меню
+
   var navigationMenu = document.querySelector('.page-subnavigation__wrapper');
   var forMenuBlocks = document.querySelectorAll('.promo-section');
   var namesMenuItems = [];
@@ -27,23 +29,48 @@
     ul.appendChild(li)
   }
 
+  var liWhereToBuy = document.createElement('li');
+  liWhereToBuy.classList.add('page-subnavigation__item');
+  var aWhereToBuy = document.createElement('a');
+  aWhereToBuy.href = 'https://www.iek.ru/products/where_to_buy/';
+  aWhereToBuy.textContent = 'Где купить';
+  aWhereToBuy.target = "_blank";
+  aWhereToBuy.classList.add('page-subnavigation__link')
+  liWhereToBuy.appendChild(aWhereToBuy);
+  ul.appendChild(liWhereToBuy);
+
   navigationMenu.appendChild(ul);
+
+  // Плавное перемещение до якорной ссылки
 
   var menuLinks = document.querySelectorAll('.page-subnavigation__link');
 
   var onSmoothScrolling = function (index) {
     menuLinks[index].addEventListener('click', function(evt) {
-      evt.preventDefault();
       var blockID = menuLinks[index].getAttribute('href');
-      document.querySelector(blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
+      if (blockID[0] === '#') {
+        evt.preventDefault();
+        document.querySelector(blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+      ul.classList.remove('page-subnavigation__list--active');
+      pageSubnavigationToogle.classList.remove('page-subnavigation__toogle--menu-open');
     });
   }
 
   for (var y = 0; y < menuLinks.length; y++) {
     onSmoothScrolling(y);
   }
+
+  // Работа кнопки в мобильной версии
+
+  var pageSubnavigationToogle = document.querySelector('.page-subnavigation__toogle');
+
+  pageSubnavigationToogle.addEventListener('click', function() {
+    ul.classList.toggle('page-subnavigation__list--active');
+    pageSubnavigationToogle.classList.toggle('page-subnavigation__toogle--menu-open');
+  });
 
  })();
