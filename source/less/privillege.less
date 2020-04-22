@@ -1,0 +1,30 @@
+.privilege {
+  .container;
+}
+
+.privilege__list {
+  .list-reset;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.privilege__item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+
+  @media(max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.privilege__img {
+  width: 100px;
+}
+
+.privilege__text {
+  padding-left: 10px;
+  width: calc(100% - 100px);
+}

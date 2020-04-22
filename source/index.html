@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="windows-1251">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" href="https://www.iek.ru/favicon.ico" type="image/x-icon">
+  <link href="../css/normalize.css" rel="stylesheet"/>
+  <link href="../css/header-footer.css" rel="stylesheet"/>
+  <link href="../css/pushy.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- <script src="../js/up-button.js" type="text/javascript" ></script> -->
+  <link href="css/style.min.css" rel="stylesheet"/>
+  <title>Шаблон промо страницы IEK</title>
+  <meta name="description" content="">
+  <script>document.createElement( "picture" );</script>
+  <script src="js/picturefill.min.js" async></script>
+  <!-- <?php include("../counters.php");?> -->
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <!-- <?php include("../header.php");?> -->
+  <main>
+    <include src="source/html/page-title.html"></include>
+    <include src="source/html/privilege.html"></include>
+    <include src="source/html/tech-param.html"></include>
+    <include src="source/html/goods.html"></include>
+    <include src="source/html/documentation.html"></include>
+    <include src="source/html/features.html"></include>
+    <include src="source/html/video.html"></include>
+    <include src="source/html/page-subnavigation.html"></include>
+    <include src="source/html/page-section.html"></include>
+  </main>
+  <!-- <?php include("../footer.php");?> -->
+  <script src="js/page-subnavigation.js"></script>
 </body>
 </html>

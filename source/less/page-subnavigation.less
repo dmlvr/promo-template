@@ -1,0 +1,34 @@
+.page-subnavigation {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+}
+
+.page-subnavigation__wrapper {
+  .container;
+}
+
+.page-subnavigation__list {
+  .list-reset;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgb(255, 204, 24);
+}
+
+.page-subnavigation__item {
+  flex-grow: 1;
+}
+
+.page-subnavigation__link {
+  display: block;
+  padding: 10px 0;
+  color: @gray;
+  text-align: center;
+  border-right: 1px solid white;
+
+  &:hover {
+    background-color: #f2ab26;
+  }
+}
