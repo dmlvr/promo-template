@@ -4,14 +4,54 @@
 }
 
 .promo-section__figure {
-  background-image: url(../img/background.png);
+  background-image: url(../img/background__garden.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 100% 200px;
+  background-size: 100%;
   margin: 0;
+  background-position: center;
+  position: relative;
+
+    &::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    background-image: url(../img/marca1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 500px) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+#garden .promo-section__figure {
+  background-image: url(../img/background__garden.jpg);
+}
+
+#industrial .promo-section__figure {
+  background-image: url(../img/background__industrial.jpg);
+}
+
+#industrial-plus .promo-section__figure {
+  background-image: url(../img/background__industrial-plus.jpg);
+}
+
+#professional .promo-section__figure {
+  background-image: url(../img/background__professional.jpg);
 }
 
 .promo-section__img {
-  width: 50%;
-  margin: 7% 5% 0 5%;
+  width: 30%;
+  margin: 10% 5% 0 5%;
+  filter: drop-shadow(-6px 6px 8px #222);
+
+  @media (max-width: 500px) {
+      width: 50%;
+    }
 }
