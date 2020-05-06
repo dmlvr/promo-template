@@ -1,7 +1,7 @@
 {
-  "name": "Liga-A-start-template",
+  "name": "IEK-promo-tamplate",
   "version": "1.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "description": "Шаблон промо страницы IEK",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
