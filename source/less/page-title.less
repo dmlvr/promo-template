@@ -9,11 +9,13 @@
   width: 100%;
   position: relative;
   margin: 0;
-  background: url(../img/background.jpg) no-repeat 50% 80% @gray;
-  background-size: cover;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position:  50% 0;
+  background-size: 100%;
 
   &::before {
-    content: "сделано в России";
+    content: "новинка";
     padding: 2px 4px;
     display: inline-block;
     background: #fe2512;
@@ -39,7 +41,7 @@
     position: absolute;
     bottom: 20px;
     right: 10px;
-    background-image: url(../img/marca1.png);
+    background-image: url(../../img/marca1.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -47,8 +49,8 @@
 
 .page-title__img {
   filter: drop-shadow(-6px 6px 8px #222);
-  padding: 15% 15% 2% 5%;
-  width: 100%;
+  padding: 5% 18% 0 5%;
+  width: 50%;
 }
 
 .page-title__text {
